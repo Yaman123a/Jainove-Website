@@ -39,10 +39,14 @@
                 <a href="#products" class="hover:text-roseAccent transition-colors">Collection</a>
                 <a href="#feedback" class="hover:text-roseAccent transition-colors">Feedback</a>
             </nav>
-            <div>
-                <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20inquire%20about%20your%20skincare%20products." target="_blank" class="bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:bg-green-700 transition-all flex items-center space-x-2">
-                    <span>Chat on WhatsApp</span>
-                </a>
+            <div class="flex items-center space-x-3">
+                <!-- Cart Trigger Button -->
+                <button onclick="toggleCart()" class="relative bg-rose-50 text-deepRose p-2.5 rounded-full hover:bg-rose-100 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span id="cartCount" class="absolute -top-1 -right-1 bg-deepRose text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+                </button>
             </div>
         </div>
     </header>
@@ -85,7 +89,7 @@
                     <div class="text-xs text-gray-500 mt-2 space-y-1">
                         <p><strong class="text-softDark">Key Ingredients:</strong> Cucumber, Neem, Tulsi, Aloe</p>
                         <p><strong class="text-softDark">Benefits:</strong> Gently cleanses & refreshes</p>
-                        <p><strong class="text-softDark">Certification:</strong> No harsh chemicals, Vegan</p>
+                        <p><strong class="text-softDark">Certification:</strong> No harsh chemicals, Vegan[cite: 1]</p>
                     </div>
                 </div>
                 <div class="mt-6 flex items-center justify-between">
@@ -93,9 +97,9 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹350/-</span>
                         <span class="text-xl font-bold text-deepRose">₹250/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Jainove%2030%20SEC%20Reset%20Face%20Wash%20(%E2%82%B9250/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Jainove 30 SEC Reset Face Wash', 250, 350)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -110,7 +114,7 @@
                     <div class="text-xs text-gray-500 mt-2 space-y-1">
                         <p><strong class="text-softDark">Key Ingredients:</strong> Shea Butter, Cocoa Butter, Kokum Butter, Vitamin E Oil</p>
                         <p><strong class="text-softDark">Benefits:</strong> Moisturized, soft skin in just 60 seconds</p>
-                        <p><strong class="text-softDark">Certification:</strong> Vegan</p>
+                        <p><strong class="text-softDark">Certification:</strong> Vegan[cite: 1]</p>
                     </div>
                 </div>
                 <div class="mt-6 flex items-center justify-between">
@@ -118,9 +122,9 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹300/-</span>
                         <span class="text-xl font-bold text-deepRose">₹199/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Jainove%20Lightweight%20Moisturiser%20Cream%20(%E2%82%B9199/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Jainove Lightweight Moisturiser Cream', 199, 300)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -131,11 +135,11 @@
                         <span class="absolute top-3 right-3 bg-deepRose text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">40% OFF</span>
                         <img src="images/berry_blush_lipbalm.jfif" alt="Berry Blush Bombz Lipbalm" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <h3 class="font-serif font-semibold text-lg text-softDark">Jainove Berry Blush Bombz</h3>
+                    <h3 class="font-serif font-semibold text-lg text-softDark">Berry Blush Bombz</h3>
                     <div class="text-xs text-gray-500 mt-2 space-y-1">
                         <p><strong class="text-softDark">Type:</strong> Tinted Lip Balm</p>
                         <p><strong class="text-softDark">Benefits:</strong> Hydrates lips up to 24 hours, Glossy tinted finish</p>
-                        <p><strong class="text-softDark">Certification:</strong> Strawberry-kissed tint, Vegan</p>
+                        <p><strong class="text-softDark">Certification:</strong> Strawberry-kissed tint, Vegan[cite: 1]</p>
                     </div>
                 </div>
                 <div class="mt-6 flex items-center justify-between">
@@ -143,9 +147,9 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹200/-</span>
                         <span class="text-xl font-bold text-deepRose">₹120/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Berry%20Blush%20Bombz%20(%E2%82%B9120/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Berry Blush Bombz', 120, 200)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -160,7 +164,7 @@
                     <div class="text-xs text-gray-500 mt-2 space-y-1">
                         <p><strong class="text-softDark">Formulation:</strong> 100% Pure Thick Real Gel</p>
                         <p><strong class="text-softDark">Enriched With:</strong> Vitamin E</p>
-                        <p><strong class="text-softDark">Certification:</strong> Vegan & Cruelty-Free</p>
+                        <p><strong class="text-softDark">Certification:</strong> Vegan & Cruelty-Free[cite: 1]</p>
                     </div>
                 </div>
                 <div class="mt-6 flex items-center justify-between">
@@ -168,9 +172,9 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹150/-</span>
                         <span class="text-xl font-bold text-deepRose">₹140/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Jainove%20Aloe%20Vera%20Gel%20(%E2%82%B9140/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Jainove Aloe Vera Gel', 140, 150)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -185,7 +189,7 @@
                     <div class="text-xs text-gray-500 mt-2 space-y-1">
                         <p><strong class="text-softDark">Formulation:</strong> 100% Pure Rose Hydrosol</p>
                         <p><strong class="text-softDark">Benefits:</strong> Soothes, balances, and hydrates skin</p>
-                        <p><strong class="text-softDark">Certification:</strong> Gentle, Skin-Friendly & Vegan</p>
+                        <p><strong class="text-softDark">Certification:</strong> Gentle, Skin-Friendly & Vegan[cite: 1]</p>
                     </div>
                 </div>
                 <div class="mt-6 flex items-center justify-between">
@@ -193,9 +197,9 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹200/-</span>
                         <span class="text-xl font-bold text-deepRose">₹99/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Jainove%20Rose%20Water%20(%E2%82%B999/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Jainove Rose Water', 99, 200)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -206,11 +210,11 @@
                         <span class="absolute top-3 right-3 bg-deepRose text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">67% OFF</span>
                         <img src="images/crystal_rose_soap.jfif" alt="Crystal Rose Soap" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <h3 class="font-serif font-semibold text-lg text-softDark">Jainove Crystal Rose Soap</h3>
+                    <h3 class="font-serif font-semibold text-lg text-softDark">Crystal Rose Soap (100gms)</h3>
                     <div class="text-xs text-gray-500 mt-2 space-y-1">
                         <p><strong class="text-softDark">Key Features:</strong> Made with Real Rose Petals</p>
                         <p><strong class="text-softDark">Enriched With:</strong> Vitamin E</p>
-                        <p><strong class="text-softDark">Certification:</strong> Vegan & Cruelty-Free</p>
+                        <p><strong class="text-softDark">Certification:</strong> Vegan & Cruelty-Free[cite: 1]</p>
                     </div>
                 </div>
                 <div class="mt-6 flex items-center justify-between">
@@ -218,13 +222,13 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹300/-</span>
                         <span class="text-xl font-bold text-deepRose">₹99/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Crystal%20Rose%20Soap%20(%E2%82%B999/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Crystal Rose Soap (100gms)', 99, 300)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
-
+            
 
             <!-- 7th: Daily Glow Duo Combo -->
             <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-rose-100 flex flex-col justify-between group">
@@ -245,9 +249,9 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹650/-</span>
                         <span class="text-xl font-bold text-deepRose">₹399/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Daily%20Glow%20Duo%20Combo%20(%E2%82%B9399/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Daily Glow Duo Combo', 399, 650)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -270,9 +274,9 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹650/-</span>
                         <span class="text-xl font-bold text-deepRose">₹299/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Jainove%20Bloom%20%26%20Glow%20Trio%20(%E2%82%B9299/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Jainove Bloom & Glow Trio', 299, 650)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -295,9 +299,9 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹500/-</span>
                         <span class="text-xl font-bold text-deepRose">₹199/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Jainove%20Rossy%20Kiss%20Glow%20Combo%20(%E2%82%B9199/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Jainove Rossy Kiss Glow Combo', 199, 500)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -319,9 +323,9 @@
                         <span class="text-sm text-gray-400 line-through mr-2">₹1500/-</span>
                         <span class="text-xl font-bold text-deepRose">₹999/-</span>
                     </div>
-                    <a href="https://wa.me/919987914070?text=Hi%20Jainove!%20I%20would%20like%20to%20order%20Jainove%20Hamper%20(%E2%82%B9999/-)." target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-green-700 transition-colors">
-                        Order on WhatsApp
-                    </a>
+                    <button onclick="addToCart('Jainove Hamper', 999, 1500)" class="bg-deepRose text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-roseAccent transition-colors">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -380,22 +384,162 @@
         </div>
     </footer>
 
+    <!-- Cart Modal Drawer -->
+    <div id="cartModal" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                <!-- Header -->
+                <div class="p-6 border-b border-rose-100 flex items-center justify-between bg-blush/30">
+                    <h3 class="font-serif text-xl font-bold text-softDark">Your Shopping Cart</h3>
+                    <button onclick="toggleCart()" class="text-gray-400 hover:text-softDark text-lg font-bold">&times;</button>
+                </div>
+
+                <!-- Form & Items Container -->
+                <div class="flex-1 overflow-y-auto p-6">
+                    <div id="emptyCartMessage" class="text-gray-400 text-center py-8">Your cart is empty.</div>
+                    
+                    <form id="orderForm" action="https://formspree.io/f/xeaqkdbz" method="POST" class="space-y-4 hidden">
+                        <input type="hidden" name="_subject" value="New Order Received from Jainove Website!">
+                        <input type="hidden" id="cartDetailsInput" name="order_details">
+                        <input type="hidden" id="orderTotalInput" name="total_amount">
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Full Name</label>
+                            <input type="text" name="customer_name" required class="w-full px-4 py-2.5 rounded-xl border border-rose-100 focus:outline-none focus:ring-2 focus:ring-roseAccent bg-blush/30 text-sm text-softDark">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Phone Number</label>
+                            <input type="tel" name="customer_phone" required class="w-full px-4 py-2.5 rounded-xl border border-rose-100 focus:outline-none focus:ring-2 focus:ring-roseAccent bg-blush/30 text-sm text-softDark">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Delivery Address</label>
+                            <textarea name="delivery_address" rows="2" required class="w-full px-4 py-2.5 rounded-xl border border-rose-100 focus:outline-none focus:ring-2 focus:ring-roseAccent bg-blush/30 text-sm text-softDark"></textarea>
+                        </div>
+
+                        <!-- Itemized List Summary Preview -->
+                        <div class="pt-2">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">Order Summary</label>
+                            <div id="cartItemsList" class="space-y-2 max-h-40 overflow-y-auto pr-1"></div>
+                        </div>
+
+                        <div class="pt-4 border-t border-rose-100 flex justify-between items-center font-serif text-lg font-bold text-softDark">
+                            <span>Total:</span>
+                            <span id="cartTotal" class="text-deepRose">₹0/-</span>
+                        </div>
+
+                        <button type="submit" class="w-full bg-deepRose text-white font-medium py-3.5 rounded-xl shadow-md hover:bg-roseAccent transition-all text-sm flex items-center justify-center space-x-2">
+                            <span>Place Order via Email</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Added to Cart Toast Notification -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 z-50 bg-softDark text-white px-4 py-3 rounded-xl shadow-xl transform translate-y-20 opacity-0 transition-all duration-300 text-sm font-medium">
+        Item added to cart successfully!
+    </div>
+
     <script>
-        const form = document.getElementById('feedbackForm');
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const data = new FormData(form);
-            fetch(form.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'json'
+        let cart = [];
+
+        function toggleCart() {
+            const modal = document.getElementById('cartModal');
+            modal.classList.toggle('hidden');
+        }
+
+        function addToCart(name, price, originalPrice) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, originalPrice, quantity: 1 });
+            }
+            updateCartUI();
+            
+            const notification = document.getElementById('toastNotification');
+            notification.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                notification.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+
+        function updateQuantity(name, change) {
+            const item = cart.find(item => item.name === name);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(i => i.name !== name);
                 }
-            }).then(response => {
-                window.location.reload();
-            }).catch(error => {
-                window.location.reload();
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartCount = document.getElementById('cartCount');
+            const emptyMsg = document.getElementById('emptyCartMessage');
+            const orderForm = document.getElementById('orderForm');
+            const cartItemsList = document.getElementById('cartItemsList');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartDetailsInput = document.getElementById('cartDetailsInput');
+            const orderTotalInput = document.getElementById('orderTotalInput');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.innerText = totalItems;
+            
+            if (cart.length === 0) {
+                emptyMsg.classList.remove('hidden');
+                orderForm.classList.add('hidden');
+                return;
+            }
+
+            emptyMsg.classList.add('hidden');
+            orderForm.classList.remove('hidden');
+
+            let html = '';
+            let grandTotal = 0;
+            let summaryText = "";
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                grandTotal += itemTotal;
+                summaryText += `${index + 1}. ${item.name} (Qty: ${item.quantity}) - ₹${itemTotal}/-\n`;
+                
+                html += `
+                    <div class="flex items-center justify-between py-2 border-b border-rose-50 text-xs">
+                        <div class="flex-1 pr-2">
+                            <span class="font-semibold text-softDark">${item.name}</span>
+                            <div class="text-gray-400">₹${item.price}/- each</div>
+                        </div>
+                        <div class="flex items-center space-x-1.5">
+                            <button type="button" onclick="updateQuantity('${item.name}', -1)" class="w-5 h-5 rounded-full bg-rose-50 text-deepRose font-bold flex items-center justify-center hover:bg-rose-100">-</button>
+                            <span class="font-medium w-4 text-center">${item.quantity}</span>
+                            <button type="button" onclick="updateQuantity('${item.name}', 1)" class="w-5 h-5 rounded-full bg-rose-50 text-deepRose font-bold flex items-center justify-center hover:bg-rose-100">+</button>
+                        </div>
+                        <div class="text-right ml-3 font-bold text-deepRose">
+                            ₹${itemTotal}/-
+                        </div>
+                    </div>
+                `;
             });
+
+            cartItemsList.innerHTML = html;
+            cartTotal.innerText = `₹${grandTotal}/-`;
+            cartDetailsInput.value = summaryText;
+            orderTotalInput.value = `₹${grandTotal}/-`;
+        }
+
+        const feedbackForm = document.getElementById('feedbackForm');
+        feedbackForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = new FormData(feedbackForm);
+            fetch(feedbackForm.action, {
+                method: feedbackForm.method,
+                body: data,
+                headers: { 'Accept': 'json' }
+            }).then(() => { window.location.reload(); }).catch(() => { window.location.reload(); });
         });
     </script>
 
